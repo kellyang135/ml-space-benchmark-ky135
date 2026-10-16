@@ -5,14 +5,15 @@ An unofficial Python distribution of
 The upstream Python source is unchanged. The distribution name distinguishes
 this package from an official release by the SPACE authors.
 
-## Build and use
+## Install
 
 ```sh
-uv build
 uv venv --python 3.12
-uv pip install --python .venv/bin/python dist/ml_space_benchmark_ky135-0.1.0-py3-none-any.whl
-.venv/bin/python -I -m space.evaluate_qas --help
+uv pip install --python .venv/bin/python ml-space-benchmark-ky135
+.venv/bin/python -m space.evaluate_qas --help
 ```
+
+To build the wheel and source archive from a repository checkout, run `uv build`.
 
 The import name remains `space`. Dataset files are not included. See the
 upstream [README](https://github.com/apple-aiml-research/ml-space-benchmark/blob/eec58a24516bfcd4554807b0a2b9d08b04eafd1c/README.md) for dataset acquisition and benchmark commands.
