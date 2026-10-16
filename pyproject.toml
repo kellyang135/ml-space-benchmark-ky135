@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=77.0.3,<78"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ml-space-benchmark-ky135"
+version = "0.1.0"
+description = "Unofficial Python distribution of the SPACE benchmark"
+readme = "PACKAGING.md"
+requires-python = ">=3.10"
+license = "LicenseRef-Apple-Sample-Code"
+license-files = ["LICENSE", "LICENSE_DATA", "ACKNOWLEDGEMENTS.md"]
+dependencies = [
+    "anthropic>=1.9,<2",
+    "fire>=0.7,<1",
+    "func-timeout>=4.3.5,<5",
+    "imageio>=2.37,<3",
+    "mdutils>=1.8,<2",
+    "networkx>=3,<4",
+    "numpy>=1.26.4,<3",
+    "openai>=2.21,<3",
+    "opencv-contrib-python>=4.8,<5",
+    "Pillow>=12.2,<13",
+    "torch>=2.1,<2.8",
+    "tqdm>=4.67,<5",
+]
+
+[project.urls]
+Upstream = "https://github.com/apple-aiml-research/ml-space-benchmark/tree/eec58a24516bfcd4554807b0a2b9d08b04eafd1c"
+Paper = "https://openreview.net/forum?id=WK6K1FMEQ1"
+
+[tool.setuptools.packages.find]
+include = ["space", "space.*"]

@@ -1,0 +1,3 @@
+include PACKAGING.md README.md requirements.txt
+include LICENSE LICENSE_DATA ACKNOWLEDGEMENTS.md
+include assets/space_figure.png
