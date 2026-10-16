@@ -28,7 +28,7 @@ this does not establish compatibility with every version in each range.
 Upstream imports both API clients, image utilities, and navigation registrations
 eagerly, so those dependencies are required even for text QA. The QA evaluator
 also imports PyTorch through its vLLM helper. `opencv-contrib-python` supplies
-`cv2` and avoids installing competing OpenCV distributions alongside dimOS.
+`cv2` and matches dimOS's OpenCV dependency.
 
 Video tasks need an imageio video backend. Install it in the same environment:
 
