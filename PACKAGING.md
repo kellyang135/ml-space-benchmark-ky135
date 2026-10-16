@@ -29,6 +29,14 @@ eagerly, so those dependencies are required even for text QA. The QA evaluator
 also imports PyTorch through its vLLM helper. `opencv-contrib-python` supplies
 `cv2` and avoids installing competing OpenCV distributions alongside dimOS.
 
+Video tasks need an imageio video backend. Install it in the same environment:
+
+```sh
+uv pip install --python .venv/bin/python "imageio[ffmpeg]>=2.37,<3"
+```
+
+Text-only QA and scoring do not need this extra.
+
 This package does not install a vLLM server. The upstream local-model backend
 requires separate setup and is not validated here. API-based QA and scoring
 do not require it.
